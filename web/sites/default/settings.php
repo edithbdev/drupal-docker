@@ -813,15 +813,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'test_drupal',
-  'username' => 'drupalUser',
-  'password' => 'testdrupal',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '3306',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+  $databases['default']['default'] = array (
+    'database' => $_ENV['DBASE'],
+    'username' => $_ENV['USER'],
+    'password' => $_ENV['PASS'],
+    'prefix' => '',
+    'host' => $_ENV['HOST'],
+    'port' => '3306',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+    'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_tz1uibBOBgf6F4IAFa_GzadzMHjbrGNB0XQe0hn4Qz6srAmtlLEDQW-9KuMgLuR1F4fNoYGT1A/sync';
